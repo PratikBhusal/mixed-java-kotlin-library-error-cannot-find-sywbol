@@ -1,0 +1,70 @@
+# https://docs.gradle.org/current/userguide/platforms.html#sub::toml-dependencies-format
+#
+# TODO: Look into the following:
+# - https://github.com/lukas-krecan/JsonUnit
+
+[versions]
+arrow-core = "1.2.4"
+checker-framework-qualifier = "3.44.0"
+jakarta-annotation-api = "3.0.0"
+lombok-gradle-plugin = "8.6"
+task-tree = "4.0.0"
+
+# Logging
+log4j = "2.23.1" # BOM-like
+slf4j-api = "2.0.13"
+
+# Testing
+assertJ = "3.26.0"
+delta-coverage = "2.3.0"
+junit = "5.10.2" # BOM-like
+mockito = "5.12.0" # BOM-like
+
+# Formatting
+spotless = "6.25.0"
+
+# Misc
+checker-framework = "0.6.40"
+
+[libraries]
+arrow-core = { module = "io.arrow-kt:arrow-core-jvm", version.ref = "arrow-core" }
+jakarta-annotation-api = { module = "jakarta.annotation:jakarta.annotation-api", version.ref = "jakarta-annotation-api" }
+checker-framework-qualifier = { module = "org.checkerframework:checker-qual", version.ref = "checker-framework-qualifier" }
+
+# Logging
+log4j-api = { module = "org.apache.logging.log4j:log4j-api", version.ref = "log4j" }
+log4j-core = { module = "org.apache.logging.log4j:log4j-core", version.ref = "log4j" }
+log4j-slf4j2-impl = { module = "org.apache.logging.log4j:log4j-slf4j2-impl", version.ref = "log4j" }
+slf4j-api = { module = "org.slf4j:slf4j-api", version.ref = "slf4j-api" }
+
+# Testing
+assertJ = { module = "org.assertj:assertj-core", version.ref = "assertJ" }
+junit = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junit" }
+mockito-core = { module = "org.mockito:mockito-core", version.ref = "mockito" }
+mockito-junit = { module = "org.mockito:mockito-junit-jupiter", version.ref = "mockito" }
+
+[plugins]
+lombok-gradle-plugin = { id = "io.freefair.lombok", version.ref = "lombok-gradle-plugin"}
+task-tree = { id = "com.dorongold.task-tree", version.ref = "task-tree"}
+
+# Improve Java Type System
+checker-framework = { id = "org.checkerframework", version.ref = "checker-framework"}
+
+# Code Formatting
+spotless = { id = "com.diffplug.spotless", version.ref = "spotless" }
+
+# Code Coverage
+delta-coverage = { id = "io.github.surpsg.delta-coverage", version.ref = "delta-coverage" }
+
+[bundles]
+jvm-shared-logging-implementation = [
+    "log4j-api",
+    "log4j-slf4j2-impl",
+    "slf4j-api",
+]
+jvm-shared-testing = [
+    "assertJ",
+    "junit",
+    "mockito-core",
+    "mockito-junit",
+]

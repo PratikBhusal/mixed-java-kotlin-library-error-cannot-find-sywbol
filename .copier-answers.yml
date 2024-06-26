@@ -1,0 +1,12 @@
+# Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
+_commit: a05112e
+_src_path: ../copier-java-template
+copyright_holder: Pratik Bhusal
+copyright_license: ISC
+java_app_or_library: java
+project_artifact_id: hello-world
+project_artifact_id_package_name_suffix: hello.world
+project_description: &#39;&#39;
+project_group_id: org.example
+project_name: Hello World
+project_version: 1.0-SNAPSHOT
