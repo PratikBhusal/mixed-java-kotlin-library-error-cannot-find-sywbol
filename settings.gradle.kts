@@ -1,3 +1,8 @@
+pluginManagement {
+    plugins {
+        kotlin("jvm") version "2.0.0"
+    }
+}
 /*
  * The settings file is used to specify which projects to include in your build.
  * For more detailed information on multi-project builds, please refer to

@@ -18,6 +18,7 @@ plugins {
 
     // Code Formatter
     alias(libs.plugins.spotless)
+    kotlin("jvm")
 }
 
 group = "org.example"
@@ -53,6 +54,7 @@ dependencies {
     //
     // - https://junit.org/junit5/docs/current/user-guide/#writing-tests-parameterized-tests-display-names
     testImplementation(libs.bundles.jvm.shared.testing)
+    implementation(kotlin("stdlib"))
 }
 
 tasks {
@@ -151,4 +153,7 @@ spotless {
         trimTrailingWhitespace()
         endWithNewline()
     }
+}
+kotlin {
+    jvmToolchain(17)
 }
