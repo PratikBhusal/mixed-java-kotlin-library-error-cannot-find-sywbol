@@ -24,7 +24,7 @@ mockito = "5.12.0" # BOM-like
 spotless = "6.25.0"
 
 # Misc
-checker-framework = "0.6.40"
+checker-framework = "0.6.42"
 
 [libraries]
 arrow-core = { module = "io.arrow-kt:arrow-core-jvm", version.ref = "arrow-core" }
