@@ -5,7 +5,7 @@
 
 [versions]
 arrow-core = "1.2.4"
-checker-framework-qualifier = "3.44.0"
+checker-framework-qualifier = "3.45.0"
 jakarta-annotation-api = "3.0.0"
 lombok-gradle-plugin = "8.6"
 task-tree = "4.0.0"
