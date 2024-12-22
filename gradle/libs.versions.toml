@@ -11,7 +11,7 @@ lombok-gradle-plugin = "8.6"
 task-tree = "4.0.0"
 
 # Logging
-log4j = "2.23.1" # BOM-like
+log4j = "2.24.3" # BOM-like
 slf4j-api = "2.0.13"
 
 # Testing
